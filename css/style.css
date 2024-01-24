@@ -1,0 +1,330 @@
+:root {
+  --primaryColor: #00e2e0;
+  --secColor: #f8cbc8;
+  --textColor: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /* 1rem = 10px */
+  height: 100vh;
+}
+
+body {
+  height: 100vh;
+  background: var(--primaryColor);
+  color: var(--textColor);
+  font-size: 1.6rem;
+  font-family: "Josefin Sans", sans-serif;
+  overflow-y: hidden;
+}
+
+/* ---------------------- General styling ---------------------- */
+.container {
+  margin: auto;
+  width: 85%;
+}
+
+.container2 {
+  margin: auto;
+  width: 70%;
+}
+
+a {
+  text-decoration: none;
+  color: var(--textColor);
+  cursor: pointer;
+}
+
+li {
+  list-style: none;
+}
+
+/* ---------------------- Layout ---------------------- */
+/* --------- Section: Header --------- */
+#header {
+  margin: 2rem 0;
+}
+.headerContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+#logo img {
+  width: 7%;
+  transform: rotate(-35deg);
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+  font-family: "Montserrat", sans-serif;
+}
+
+.bold {
+  font-weight: 900;
+  font-size: 2.3rem;
+  letter-spacing: 0.5rem;
+  /* font-stretch: ultra-expanded; */
+}
+
+.light {
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+
+.logoText span {
+  display: block;
+}
+
+#jokeType {
+  text-transform: uppercase;
+}
+
+/* --------- Section: Side Menu & Swiper --------- */
+.sideContent .sideMenu {
+  position: relative;
+}
+
+.sideContent {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-between;
+  margin-top: 18rem;
+}
+
+.social {
+  grid-column: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 9rem;
+}
+
+.social i {
+  display: block;
+  transition: all 0.4s;
+}
+
+.social i:hover {
+  box-shadow: 12px 12px 54px 0.5px rgba(0, 0, 0, 0.281);
+  transform: translateY(-10px) rotate(-20deg);
+  transition: all 0.4s;
+}
+
+.swiper {
+  margin-top: 3rem;
+  width: 15%;
+  /* padding: 5rem 0; */
+}
+
+.jokeSelection {
+  grid-column: 5;
+  position: absolute;
+  top: 0%;
+  right: 5%;
+  text-transform: uppercase;
+}
+
+.swiper-slide {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin: 2;
+  color: #ffffff7a;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  /* box-shadow: 1.5rem 0 3rem rgba(0, 0, 0, 0.267); */
+  filter: blur(0.2rem);
+  padding: 0 2rem;
+}
+
+.swiper-slide-active {
+  position: relative;
+  border-radius: 8rem;
+  background: var(--secColor);
+  box-shadow: 1px 2px 6px 0 rgb(255, 255, 255) inset,
+    -2px -3px 6px 0 rgba(0, 0, 0, 0.25) inset,
+    1rem 1rem 3rem rgba(0, 0, 0, 0.13),
+    -0.5rem -0.8rem 3rem rgba(0, 0, 0, 0.171);
+  color: #fff;
+  filter: blur(0px);
+  cursor: pointer;
+  transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1) !important;
+  font-size: 2rem;
+  padding: 2rem 2rem 1.5rem 2rem;
+  width: 22rem;
+  height: 2rem;
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  color: #ffffffc0;
+  filter: blur(0.12rem);
+}
+
+.swiper-3d .swiper-slide-shadow-top,
+.swiper-3d .swiper-slide-shadow-bottom {
+  border-radius: 8rem;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+.swiper-3d .swiper-slide-shadow-left,
+.swiper-3d .swiper-slide-shadow-right {
+  background-image: none;
+}
+
+.swiper-wrapper {
+  height: 100%;
+  padding: 2rem;
+}
+
+/* --------- Section: Joke --------- */
+#jokeCentral {
+  grid-column: 2 / span 3;
+  margin-top: 2rem;
+}
+
+.centralContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* align-items: center; */
+}
+
+#jokeCentral,
+.centralContent,
+.getJoke {
+  position: relative;
+}
+
+.centralBg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+}
+
+.centralBg h1 {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, 50%);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 15rem;
+  background: -webkit-linear-gradient(
+    #00e2e0,
+    #ffffff05,
+    #ffffff50,
+    #ffffffb4,
+    #ffffff
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.centralBg img {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.joke {
+  color: var(--textColor);
+  background: #e7bbb8;
+  width: 75rem;
+  height: 40rem;
+  border-radius: 3rem;
+  box-shadow: 1px 2px 6px 0 rgb(255, 255, 255) inset,
+    -2px -3px 6px 0 rgba(0, 0, 0, 0.25) inset;
+  padding: 3rem;
+  text-align: center;
+  font-weight: 600;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0%;
+  left: -5%;
+  /* transform: translate(0, 35%); */
+  z-index: 2;
+}
+
+.close {
+  font-size: 2.5rem;
+  position: absolute;
+  transform: translate(0, 0);
+  top: 0;
+  right: 0;
+  margin-top: 2rem;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+.jokeText {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.jokeAnswer {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+.btnJoke {
+  /* text-align: ; */
+  margin-top: 3rem;
+  display: inline-block;
+  background: var(--secColor);
+  color: var(--textColor);
+  outline: none;
+  border: none;
+  padding: 1.5rem 10rem;
+  border-radius: 4rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  word-spacing: 0.3rem;
+  position: absolute;
+  left: 25%;
+  transform: translate(0, 480%);
+  cursor: pointer;
+  box-shadow: 1px 2px 6px 0 rgb(255, 255, 255) inset,
+    -2px -3px 6px 0 rgba(0, 0, 0, 0.25) inset,
+    22px 32px 16px 3px rgba(0, 0, 0, 0.15);
+  transition: all 0.4s;
+}
+
+.btnJoke:hover {
+  background: #ddaca8;
+  box-shadow: 1px 2px 6px 0 rgb(255, 255, 255) inset,
+    -2px -3px 6px 0 rgba(0, 0, 0, 0.25) inset,
+    22px 32px 16px 3px rgba(0, 0, 0, 0.25);
+  transition: all 0.4s;
+}

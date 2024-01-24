@@ -1,0 +1,384 @@
+/******************************************
+/* Responsive Media Queries
+/*******************************************/
+/******************************************
+/* Smartphone
+/*******************************************/
+@media screen and (max-width: 580px) {
+  /* ---------------------- Layout ---------------------- */
+  body {
+    height: 100vh;
+    overflow-y: hidden;
+  }
+
+  .container2 {
+    width: 95%;
+  }
+  /* --------- Section: Header --------- */
+  .headerContent {
+    justify-content: center;
+  }
+
+  #logo {
+    justify-content: center;
+  }
+
+  #logo img {
+    width: 13%;
+  }
+
+  #jokeType {
+    display: none;
+  }
+
+  /* --------- Section: Side Menu & Swiper --------- */
+  .sideContent {
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(5, 1fr);
+    margin-top: 1rem;
+  }
+
+  .social {
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+    margin-bottom: 5rem;
+    grid-row: 5;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    gap: 3rem;
+  }
+
+  .swiper {
+    width: 100%;
+    height: fit-content;
+  }
+
+  .jokeSelection {
+    grid-row: 4;
+    position: absolute;
+    top: 75%;
+    left: 0;
+  }
+
+  .swiper-slide {
+    font-size: 1.3rem;
+    width: 25rem;
+    justify-content: center;
+  }
+
+  .swiper-slide-active {
+    font-size: 1.5rem;
+    padding: 2rem 7rem 1.5rem 7rem;
+    width: 25rem;
+  }
+
+  /* --------- Section: Joke --------- */
+  #jokeCentral {
+    grid-column: 1 / span 3;
+  }
+
+  .centralContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+  }
+
+  .centralBg {
+    padding-top: 15rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+  }
+
+  .getJoke {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 5rem;
+    /* overflow: hidden; */
+  }
+
+  .centralBg h1 {
+    position: absolute;
+    top: 120%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 900;
+    font-size: 4.1rem;
+    background: -webkit-linear-gradient(
+      #00e2e0,
+      #ffffff05,
+      #ffffff50,
+      #ffffffb4,
+      #ffffff
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .centralBg img {
+    padding-top: 4rem;
+    position: absolute;
+    top: 60%;
+    width: 100%;
+  }
+
+  .joke {
+    color: var(--textColor);
+    background: #e7bbb8;
+    width: 32rem;
+    height: 32rem;
+    border-radius: 3rem;
+    box-shadow: 1px 2px 6px 0 rgb(255, 255, 255) inset,
+      -2px -3px 6px 0 rgba(0, 0, 0, 0.25) inset;
+    padding: 4rem 2rem;
+    text-align: center;
+    font-weight: 500;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    transform: translate(0, 0);
+    z-index: 2;
+  }
+
+  .close {
+    font-size: 2rem;
+    position: absolute;
+    transform: translate(0, 0);
+    top: 0;
+    right: 0;
+    margin-top: 2rem;
+    margin-right: 3rem;
+    cursor: pointer;
+  }
+
+  .hidden {
+    display: none;
+  }
+
+  .jokeText {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .jokeAnswer {
+    font-size: 2.5rem;
+    font-weight: 700;
+  }
+
+  .btnJoke {
+    margin-top: 3rem;
+    width: 100%;
+    padding: 1.5rem 4rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    top: 30%;
+    left: 0;
+  }
+}
+
+/******************************************
+/* Tablet
+/*******************************************/
+@media (min-width: 581px) and (max-width: 768px) {
+  /* ---------------------- General styling ---------------------- */
+  .container {
+    margin: auto;
+    width: 90%;
+  }
+
+  .container2 {
+    margin: auto;
+    width: 70%;
+  }
+
+  .swiper {
+    margin-top: 3rem;
+    width: 25%;
+    /* padding: 5rem 0; */
+  }
+
+  .swiper-slide-active {
+    font-size: 1.5rem;
+    width: 16rem;
+  }
+
+  .centralBg h1 {
+    position: absolute;
+    top: 60%;
+    transform: translate(0, 90%);
+    font-size: 7.5rem;
+  }
+
+  .centralBg img {
+    position: absolute;
+    top: 0;
+    width: 500px;
+    z-index: 1;
+  }
+
+  .joke {
+    width: 50rem;
+    height: 35rem;
+    left: -35%;
+  }
+
+  .jokeText {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .jokeAnswer {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .btnJoke {
+    padding: 1.5rem 8rem;
+    left: 15%;
+  }
+}
+
+@media (min-width: 581px) and (max-width: 621px) {
+  .joke {
+    left: -60%;
+  }
+}
+
+@media (min-width: 622px) and (max-width: 640px) {
+  .joke {
+    left: -55%;
+  }
+}
+
+@media (min-width: 640px) and (max-width: 685px) {
+  .joke {
+    left: -45%;
+  }
+}
+
+/******************************************
+/* Laptop
+/*******************************************/
+@media (min-width: 769px) and (max-width: 1200px) {
+  .swiper {
+    margin-top: 3rem;
+    width: 20%;
+    /* padding: 5rem 0; */
+  }
+
+  .swiper-slide-active {
+    font-size: 1.5rem;
+    width: 16rem;
+  }
+
+  .centralBg h1 {
+    transform: translate(0, 90%);
+    font-size: 8rem;
+  }
+
+  .centralBg img {
+    width: 500px;
+  }
+
+  .joke {
+    width: 50rem;
+    height: 35rem;
+    left: -35%;
+  }
+
+  .jokeText {
+    font-size: 2rem;
+    margin-bottom: 3rem;
+  }
+
+  .jokeAnswer {
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .btnJoke {
+    padding: 1.5rem 8rem;
+    left: 15%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 940px) {
+  .swiper {
+    width: 25%;
+  }
+}
+
+/******************************************
+/* Widescreen
+/*******************************************/
+@media (min-width: 1201px) and (max-width: 1400px) {
+  .swiper {
+    margin-top: 3rem;
+    width: 20%;
+  }
+
+  .centralBg h1 {
+    font-size: 9rem;
+  }
+
+  .centralBg img {
+    width: 500px;
+  }
+
+  .joke {
+    width: 70rem;
+    height: 40rem;
+    left: -35%;
+  }
+
+  .btnJoke {
+    padding: 1.5rem 8rem;
+    left: 25%;
+  }
+}
+
+@media (min-width: 1401px) {
+  .swiper {
+    margin-top: 3rem;
+    width: 18%;
+  }
+
+  .joke {
+    width: 70rem;
+    height: 40rem;
+    left: 0;
+  }
+}
+@media (min-width: 1625px) {
+  .swiper {
+    margin-top: 3rem;
+    width: 15%;
+  }
+}
+
+/******************************************
+/* Landscape
+/*******************************************/
+@media screen and (max-height: 600px) {
+  body {
+    overflow-y: auto;
+  }
+
+  .sideContent {
+    margin-top: 10rem;
+  }
+
+  .swiper {
+    margin-top: 0;
+  }
+}

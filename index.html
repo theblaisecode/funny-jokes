@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="A passionate frontend engineer with expertise in HTML, CSS, and JavaScript. Explore a showcase of beautifully designed and interactive websites and web applications. Contact for collaborations and job opportunities."
+    />
+    <link rel="shortcut icon" href="./img/profile.png" type="image/x-icon" />
+    <title>TheBlaiseCode - Joke Machine</title>
+
+    <!-- ---------------------- Preconnect hints for Google Fonts  -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Alata&family=Josefin+Sans:wght@100;200;300;400;500;600;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ---------------------- Fontaewsome ---------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v6.4.2/css/all.css"
+    />
+
+    <!-- ---------------------- Swiper JS CSS ---------------------- -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.css"
+    />
+
+    <!-- ---------------------- External CSS Styling ---------------------- -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/responsive.css" />
+  </head>
+  <body>
+    <!-- ---------------------- Section: Header ---------------------- -->
+    <section id="header">
+      <div class="container">
+        <!-- ---------------------- Header Content ---------------------- -->
+        <div class="headerContent">
+          <!-- ---------------------- Logo ---------------------- -->
+          <a id="logo" href="./index.html">
+            <img src="./img/gray.png" alt="" />
+            <div class="logoText">
+              <span class="bold">joke</span>
+              <span class="light">machine</span>
+            </div>
+          </a>
+
+          <div id="jokeType">
+            <h2>Menu</h2>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------- Section: Side Menu ---------------------- -->
+    <section id="sideMenu">
+      <div class="container">
+        <div class="sideContent">
+          <div class="social">
+            <a
+              href="https://github.com/theblaisecode"
+              target="_blank"
+              aria-label="Visit my github page"
+            >
+              <i id="github" class="fa-brands fa-github fa-xl"></i>
+            </a>
+
+            <a
+              href="https://www.linkedin.com/in/theblaisecode"
+              target="_blank"
+              aria-label="Visit my linkedin page"
+            >
+              <i class="fa-brands fa-linkedin fa-xl"></i>
+            </a>
+
+            <a
+              href="https://codepen.io/theblaisecode"
+              target="_blank"
+              aria-label="Visit my codepen page"
+            >
+              <i class="fa-brands fa-codepen fa-xl"></i>
+            </a>
+
+            <a
+              href="https://twitter.com/theblaisecode"
+              target="_blank"
+              aria-label="Visit my twitter page"
+            >
+              <i class="fa-brands fa-twitter fa-xl"></i>
+            </a>
+
+            <a
+              href="https://instagram.com/theblaisecode"
+              target="_blank"
+              aria-label="Visit my instagram page"
+            >
+              <i class="fa-brands fa-instagram fa-xl"></i>
+            </a>
+          </div>
+
+          <section id="jokeCentral">
+            <div class="container2">
+              <div class="centralContent">
+                <div class="centralBg">
+                  <h1>RANDOM</h1>
+                  <img src="./img/4jokemachine.png" alt="" />
+                </div>
+
+                <div class="getJoke">
+                  <div class="joke hidden">
+                    <div>
+                      <div class="close">
+                        <i class="icon fa-solid fa-xmark"></i>
+                      </div>
+                      <div class="jokeText"></div>
+                      <div class="jokeAnswer"></div>
+                    </div>
+                    <button class="btnJoke">Make me laugh!</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <div class="swiper jokeSelection mySwiper">
+            <!-- Additional required wrapper -->
+            <ul class="swiper-wrapper">
+              <!-- Slides -->
+              <li id="random" class="swiper-slide">Random</li>
+
+              <!-- <li id="dad" class="swiper-slide">Dad Jokes</li> -->
+
+              <li id="programming" class="swiper-slide">Programming</li>
+
+              <li id="dark" class="swiper-slide">Dark Humor</li>
+
+              <li id="miscellaneous" class="swiper-slide">Misc</li>
+
+              <li id="pun" class="swiper-slide">Pun</li>
+
+              <li id="spooky" class="swiper-slide">Spooky</li>
+
+              <li id="christmas" class="swiper-slide">Christmas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------- Swiper JS ---------------------- -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+
+    <script src="./js/app.js"></script>
+  </body>
+</html>
