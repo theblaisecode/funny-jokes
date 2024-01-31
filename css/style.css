@@ -1,7 +1,7 @@
 :root {
   --primaryColor: #00e2e0;
   --secColor: #f8cbc8;
-  --textColor: #ffffff;
+  --textColor: #014948;
 }
 
 * {
@@ -144,7 +144,7 @@ li {
   font-size: 2.2rem;
   font-weight: 600;
   margin: 2;
-  color: #ffffff7a;
+  color: #0149487a;
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -161,7 +161,7 @@ li {
     -2px -3px 6px 0 rgba(0, 0, 0, 0.25) inset,
     1rem 1rem 3rem rgba(0, 0, 0, 0.13),
     -0.5rem -0.8rem 3rem rgba(0, 0, 0, 0.171);
-  color: #fff;
+  color: var(--textColor);
   filter: blur(0px);
   cursor: pointer;
   transform: translate3d(0px, 0px, 0px) rotateX(0deg) rotateY(0deg) scale(1) !important;
@@ -173,7 +173,7 @@ li {
 
 .swiper-slide-prev,
 .swiper-slide-next {
-  color: #ffffffc0;
+  color: #014948c0;
   filter: blur(0.12rem);
 }
 
@@ -233,10 +233,10 @@ li {
   font-size: 15rem;
   background: -webkit-linear-gradient(
     #00e2e0,
-    #ffffff05,
-    #ffffff50,
-    #ffffffb4,
-    #ffffff
+    #01494805,
+    #01494850,
+    #014948b4,
+    #014948
   );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
